@@ -1,4 +1,4 @@
-console.log("Client side JS file loaded")
+//console.log("Client side JS file loaded")
 
 const endPointUrl = (address) => {
     document.getElementById('forecast').textContent = ''
