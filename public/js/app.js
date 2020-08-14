@@ -4,7 +4,7 @@ const endPointUrl = (address) => {
     document.getElementById('forecast').textContent = ''
     document.getElementById('location').style.color = 'black'
     document.getElementById('location').innerHTML = '<h3>Loading......</h3>'
-    fetch('http://localhost:3000/weather?address=' + address).then((response = {}) => {
+    fetch('/weather?address=' + address).then((response = {}) => {
     response.json().then((data) => {
         if(!data.error) {
             document.getElementById('location').textContent = data.location

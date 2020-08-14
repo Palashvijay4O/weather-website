@@ -11,6 +11,7 @@ const app = express()
 const htmlDir = path.join(__dirname, '../public')
 const viewsDir = path.join(__dirname, '../templates/views')
 const partialDir = path.join(__dirname, '../templates/partials')
+const port = process.env.PORT || 3000
 
 // Set handle bar engines and views folder
 app.set('view engine', 'hbs')
@@ -66,6 +67,6 @@ app.get('*', (req, res) => {
     res.render('error', {errorMsg: 'Page not found', name: 'Palash Vijay'})
 })
 
-app.listen(3000, () => {
-    console.log("Server is up and running...")
+app.listen(port, () => {
+    console.log("Server is up and running at port: " + port)
 })
